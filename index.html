@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Relay — Emergency Blood Matching</title>
+  <meta name="description" content="Blood Relay connects people who urgently need blood with nearby donors in three taps. PixelRush 2026 prototype — fictional data only." />
+  <meta name="theme-color" content="#DC2626" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header shell">
+    <a class="wordmark" href="/" data-testid="wordmark-link" aria-label="Blood Relay home">
+      <span class="drop-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+      </span>
+      Blood Relay
+    </a>
+    <a class="header-side" href="donor.html" data-testid="header-donor-link">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      I'm a donor
+    </a>
+  </header>
+
+  <main class="page-main shell">
+    <div class="home-hero">
+      <div class="hero-glow">
+        <span class="kicker-badge"><span class="kicker-dot" aria-hidden="true"></span>Emergency blood matching</span>
+        <h1 class="h-display mt-16">The nearest compatible donor, one tap away.</h1>
+        <p class="sub">Raise an emergency blood request in three taps. Blood Relay alerts matching donors around your hospital and tracks every step until the unit arrives.</p>
+        <div class="mt-32">
+          <a class="cta-emergency" href="request.html" data-testid="emergency-cta">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+            I NEED BLOOD
+            <span class="cta-sub">Starts a 3-tap request</span>
+          </a>
+        </div>
+        <div class="chip-row">
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>3 taps · no typing</span>
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>No sign-up</span>
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>Track every step</span>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card preset-card" data-testid="home-preset-hospital">
+          <div class="preset-row">
+            <span class="preset-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <p class="preset-title">CityCare Hospital, Ahmedabad</p>
+              <p class="preset-meta">Pre-filled location — you never type under stress. Switch hospitals on the request screen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card preset-card">
+          <span class="eyebrow eyebrow--muted">Prototype · every screen</span>
+          <nav class="scenario-list" aria-label="Prototype scenarios">
+            <a href="donor.html" data-testid="home-scenario-donor-alert">
+              Donor view — Someone needs you
+              <span class="scenario-tag">Donor</span>
+            </a>
+            <a href="edge-no-donor.html" data-testid="home-scenario-edge-no-donor">
+              No donor nearby
+              <span class="scenario-tag">Edge</span>
+            </a>
+            <a href="edge-declined.html" data-testid="home-scenario-edge-declined">
+              Donor declined
+              <span class="scenario-tag">Edge</span>
+            </a>
+            <a href="edge-expired.html" data-testid="home-scenario-edge-expired">
+              Request expired
+              <span class="scenario-tag">Edge</span>
+            </a>
+            <a href="fulfilled.html" data-testid="home-scenario-fulfilled">
+              Request fulfilled
+              <span class="scenario-tag">State</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="page-footer shell">
+    <span>Blood Relay — PixelRush 2026 prototype</span>
+    <span>Fictional donors, numbers and hospitals only</span>
+  </footer>
+
+  <details class="screens-nav">
+    <summary data-testid="screens-nav-toggle" aria-label="Open prototype screen navigator">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      All screens
+    </summary>
+    <nav class="screens-nav-panel" aria-label="Prototype screens">
+      <span class="nav-group-label">Requester flow</span>
+      <a href="index.html" data-testid="nav-home" class="is-here">Home <span class="nav-here-dot" aria-hidden="true"></span></a>
+      <a href="request.html" data-testid="nav-request">Emergency Request</a>
+      <a href="matching.html" data-testid="nav-matching">Matching Donors</a>
+      <a href="confirm.html" data-testid="nav-confirm">Donor Confirm</a>
+      <a href="tracker.html" data-testid="nav-tracker">Status Tracker</a>
+      <a href="fulfilled.html" data-testid="nav-fulfilled">Fulfilled</a>
+      <span class="nav-group-label">Donor &amp; edges</span>
+      <a href="donor.html" data-testid="nav-donor-alert">Donor Alert</a>
+      <a href="edge-no-donor.html" data-testid="nav-edge-no-donor">No Donor Nearby</a>
+      <a href="edge-declined.html" data-testid="nav-edge-declined">Donor Declined</a>
+      <a href="edge-expired.html" data-testid="nav-edge-expired">Request Expired</a>
+    </nav>
+  </details>
+</body>
+</html>

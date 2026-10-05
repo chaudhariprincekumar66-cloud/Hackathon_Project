@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Status Tracker — Blood Relay</title>
+  <meta name="description" content="Track your emergency blood request: donor accepted, on the way, and every step until fulfilled." />
+  <meta name="theme-color" content="#DC2626" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header shell">
+    <a class="wordmark" href="/" data-testid="wordmark-link" aria-label="Blood Relay home">
+      <span class="drop-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+      </span>
+      Blood Relay
+    </a>
+    <a class="header-side" href="/" data-testid="back-home-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg>
+      Home
+    </a>
+  </header>
+
+  <main class="page-main shell-mid">
+    <span class="eyebrow">Request status</span>
+    <h1 class="h-lg mt-8">Your request is moving</h1>
+
+    <div class="banner banner--success mt-16" data-testid="tracker-assurance">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+      <span><strong>Yes — someone is coming.</strong> Rahul Patel accepted 12 minutes ago and is preparing to leave.</span>
+    </div>
+
+    <section class="section">
+      <div class="card kv-card" data-testid="tracker-summary">
+        <div class="kv-row">
+          <span class="kv-key">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+            Blood group
+          </span>
+          <span class="kv-val"><span class="badge badge--group">B-</span></span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-key">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hospital
+          </span>
+          <span class="kv-val">CityCare Hospital, Ahmedabad</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-key">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Time remaining
+          </span>
+          <span class="kv-val kv-val--big kv-val--crimson">1h 24m</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card" data-testid="tracker-timeline">
+        <h2 class="h-md">Progress</h2>
+        <ol class="timeline mt-16">
+          <li class="is-done">
+            <span class="t-dot" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+            <p class="t-title">Request Sent</p>
+            <p class="t-meta">3:12 PM · raised from the Emergency Request screen</p>
+          </li>
+          <li class="is-done">
+            <span class="t-dot" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+            <p class="t-title">Donors Notified</p>
+            <p class="t-meta">8 matching donors alerted within 30 seconds</p>
+          </li>
+          <li class="is-done">
+            <span class="t-dot" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+            <p class="t-title">Donor Accepted</p>
+            <p class="t-meta">Rahul Patel (B-) accepted · 3:26 PM</p>
+          </li>
+          <li class="is-now">
+            <span class="t-dot" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+            </span>
+            <p class="t-title">On the Way</p>
+            <p class="t-meta">1.2 km from CityCare Hospital · about 6 minutes</p>
+          </li>
+          <li>
+            <span class="t-dot" aria-hidden="true"></span>
+            <p class="t-title">Fulfilled</p>
+            <p class="t-meta">Donation and handover at CityCare Hospital</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="map-card" data-testid="tracker-map">
+        <svg class="map-art" viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M0 155 Q 120 118 205 132 T 400 92" stroke="#CBD5E1" stroke-width="14" fill="none" opacity="0.55"/>
+          <path d="M50 30 Q 140 92 215 86 T 400 165" stroke="#CBD5E1" stroke-width="9" fill="none" opacity="0.4"/>
+          <path d="M92 158 C 142 118, 214 142, 298 74" stroke="#DC2626" stroke-width="3.5" stroke-dasharray="1 10" stroke-linecap="round" fill="none"/>
+          <circle cx="92" cy="158" r="12" fill="#FFFFFF" stroke="#DC2626" stroke-width="3"/>
+          <circle cx="92" cy="158" r="4.5" fill="#DC2626"/>
+          <path d="M298 50c9 11 15 17 15 25a15 15 0 1 1-30 0c0-8 6-14 15-25Z" fill="#DC2626"/>
+          <circle cx="298" cy="75" r="5" fill="#FFFFFF"/>
+        </svg>
+        <p class="map-caption" data-testid="map-caption">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Rahul → CityCare Hospital · 1.2 km
+          <span class="map-note">Static preview — no live GPS</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="stat-row" data-testid="tracker-stats">
+        <div class="stat"><b>8</b><span>Donors notified</span></div>
+        <div class="stat"><b>3</b><span>Responses received</span></div>
+        <div class="stat"><b class="stat-green">1</b><span>Accepted</span></div>
+      </div>
+    </section>
+
+    <section class="section" data-testid="tracker-actions">
+      <div class="action-stack">
+        <a class="btn btn--primary btn--lg btn--block" href="tel:+919876543210" data-testid="call-donor-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          CALL DONOR
+        </a>
+        <div class="action-row-2">
+          <a class="btn btn--secondary btn--lg" href="edge-no-donor.html" data-testid="widen-search-btn">WIDEN SEARCH</a>
+          <a class="btn btn--danger-outline btn--lg" href="/" data-testid="cancel-request-btn">CANCEL REQUEST</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="quiet-link-row" data-testid="edge-shortcuts">
+      <span class="small-note">Simulate:</span>
+      <a href="edge-no-donor.html" data-testid="preview-edge-no-donor">No donor nearby</a>
+      <a href="edge-declined.html" data-testid="preview-edge-declined">Donor declined</a>
+      <a href="edge-expired.html" data-testid="preview-edge-expired">Request expired</a>
+    </div>
+  </main>
+
+  <footer class="page-footer shell">
+    <span>Blood Relay — PixelRush 2026 prototype</span>
+    <span>Fictional donors, numbers and hospitals only</span>
+  </footer>
+
+  <details class="screens-nav">
+    <summary data-testid="screens-nav-toggle" aria-label="Open prototype screen navigator">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      All screens
+    </summary>
+    <nav class="screens-nav-panel" aria-label="Prototype screens">
+      <span class="nav-group-label">Requester flow</span>
+      <a href="/" data-testid="nav-home">Home</a>
+      <a href="request.html" data-testid="nav-request">Emergency Request</a>
+      <a href="matching.html" data-testid="nav-matching">Matching Donors</a>
+      <a href="confirm.html" data-testid="nav-confirm">Donor Confirm</a>
+      <a href="tracker.html" data-testid="nav-tracker" class="is-here">Status Tracker <span class="nav-here-dot" aria-hidden="true"></span></a>
+      <a href="fulfilled.html" data-testid="nav-fulfilled">Fulfilled</a>
+      <span class="nav-group-label">Donor &amp; edges</span>
+      <a href="donor-alert.html" data-testid="nav-donor-alert">Donor Alert</a>
+      <a href="edge-no-donor.html" data-testid="nav-edge-no-donor">No Donor Nearby</a>
+      <a href="edge-declined.html" data-testid="nav-edge-declined">Donor Declined</a>
+      <a href="edge-expired.html" data-testid="nav-edge-expired">Request Expired</a>
+    </nav>
+  </details>
+</body>
+</ht

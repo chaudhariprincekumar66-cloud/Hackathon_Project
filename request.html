@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Request — Blood Relay</title>
+  <meta name="description" content="Raise an emergency blood request in three taps — choose a blood group and send. No typing required." />
+  <meta name="theme-color" content="#DC2626" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header shell">
+    <a class="wordmark" href="/" data-testid="wordmark-link" aria-label="Blood Relay home">
+      <span class="drop-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+      </span>
+      Blood Relay
+    </a>
+    <a class="header-side" href="index.html" data-testid="back-home-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg>
+      Home
+    </a>
+  </header>
+
+  <main class="page-main shell-narrow">
+    <h1 class="h-xl">Send an emergency request</h1>
+    <p class="sub">Three taps. No typing, no forms — your details are pre-filled.</p>
+
+    <ol class="tap-strip" data-testid="tap-strip">
+      <li class="is-done">
+        <span class="tap-label">Tap 1</span>
+        <span class="tap-name">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          I need blood
+        </span>
+      </li>
+      <li class="is-now">
+        <span class="tap-label">Tap 2</span>
+        <span class="tap-name">Choose blood group</span>
+      </li>
+      <li>
+        <span class="tap-label">Tap 3</span>
+        <span class="tap-name">Send request</span>
+      </li>
+    </ol>
+
+    <section class="section">
+      <fieldset class="fieldset">
+        <legend class="legend">Blood group needed</legend>
+        <p class="legend-hint">The group the patient requires — pick one, or keep the pre-selected B-.</p>
+        <div class="blood-grid">
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-a-pos" value="A+" />
+          <label class="blood-tile" for="bg-a-pos" data-testid="blood-group-a-plus">A+</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-a-neg" value="A-" />
+          <label class="blood-tile" for="bg-a-neg" data-testid="blood-group-a-minus">A-</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-b-pos" value="B+" />
+          <label class="blood-tile" for="bg-b-pos" data-testid="blood-group-b-plus">B+</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-b-neg" value="B-" checked />
+          <label class="blood-tile" for="bg-b-neg" data-testid="blood-group-b-minus">B-</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-ab-pos" value="AB+" />
+          <label class="blood-tile" for="bg-ab-pos" data-testid="blood-group-ab-plus">AB+</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-ab-neg" value="AB-" />
+          <label class="blood-tile" for="bg-ab-neg" data-testid="blood-group-ab-minus">AB-</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-o-pos" value="O+" />
+          <label class="blood-tile" for="bg-o-pos" data-testid="blood-group-o-plus">O+</label>
+
+          <input class="sr-radio" type="radio" name="blood-group" id="bg-o-neg" value="O-" />
+          <label class="blood-tile" for="bg-o-neg" data-testid="blood-group-o-minus">O-</label>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="section">
+      <fieldset class="fieldset">
+        <legend class="legend">How urgent is it?</legend>
+        <p class="legend-hint">Presets only — change one if you need to, otherwise keep the default.</p>
+        <div class="pill-row">
+          <input class="sr-radio" type="radio" name="urgency" id="u-30" value="Within 30 minutes" />
+          <label class="pill" for="u-30" data-testid="urgency-within-30-min"><span class="dot" aria-hidden="true"></span>Within 30 minutes</label>
+
+          <input class="sr-radio" type="radio" name="urgency" id="u-60" value="Within 1 hour" />
+          <label class="pill" for="u-60" data-testid="urgency-within-1-hour"><span class="dot" aria-hidden="true"></span>Within 1 hour</label>
+
+          <input class="sr-radio" type="radio" name="urgency" id="u-120" value="Within 2 hours" checked />
+          <label class="pill" for="u-120" data-testid="urgency-within-2-hours"><span class="dot" aria-hidden="true"></span>Within 2 hours</label>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="section">
+      <fieldset class="fieldset">
+        <legend class="legend">Where is the blood needed?</legend>
+        <p class="legend-hint">Pre-filled from your location — tap a row to switch hospitals.</p>
+        <div class="hospital-list">
+          <input class="sr-radio" type="radio" name="hospital" id="h-citycare" value="CityCare Hospital" checked />
+          <label class="hospital-row" for="h-citycare" data-testid="hospital-citycare">
+            <span class="h-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 9v6M9 12h6"/></svg>
+            </span>
+            <span>
+              <span class="h-name">CityCare Hospital</span>
+              <span class="h-meta">Ahmedabad · pre-filled, 2.1 km from you</span>
+            </span>
+            <span class="h-check" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+          </label>
+
+          <input class="sr-radio" type="radio" name="hospital" id="h-sunrise" value="Sunrise Medical Center" />
+          <label class="hospital-row" for="h-sunrise" data-testid="hospital-sunrise">
+            <span class="h-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 9v6M9 12h6"/></svg>
+            </span>
+            <span>
+              <span class="h-name">Sunrise Medical Center</span>
+              <span class="h-meta">Ahmedabad · Satellite, 4.6 km from you</span>
+            </span>
+            <span class="h-check" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+          </label>
+
+          <input class="sr-radio" type="radio" name="hospital" id="h-lakeview" value="Lakeview Multispeciality" />
+          <label class="hospital-row" for="h-lakeview" data-testid="hospital-lakeview">
+            <span class="h-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 9v6M9 12h6"/></svg>
+            </span>
+            <span>
+              <span class="h-name">Lakeview Multispeciality</span>
+              <span class="h-meta">Ahmedabad · Riverside, 5.2 km from you</span>
+            </span>
+            <span class="h-check" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="section">
+      <a class="btn btn--primary btn--lg btn--block" href="matching.html" data-testid="send-request-btn">
+        SEND REQUEST
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+      <p class="text-center small-note mt-8">Tap 3 — every matching donor within 5 km is alerted instantly.</p>
+    </section>
+  </main>
+
+  <footer class="page-footer shell-narrow">
+    <span>Blood Relay — PixelRush 2026 prototype</span>
+    <span>Fictional donors, numbers and hospitals only</span>
+  </footer>
+
+  <details class="screens-nav">
+    <summary data-testid="screens-nav-toggle" aria-label="Open prototype screen navigator">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      All screens
+    </summary>
+    <nav class="screens-nav-panel" aria-label="Prototype screens">
+      <span class="nav-group-label">Requester flow</span>
+      <a href="/" data-testid="nav-home">Home</a>
+      <a href="request.html" data-testid="nav-request" class="is-here">Emergency Request <span class="nav-here-dot" aria-hidden="true"></span></a>
+      <a href="matching.html" data-testid="nav-matching">Matching Donors</a>
+      <a href="confirm.html" data-testid="nav-confirm">Donor Confirm</a>
+      <a href="tracker.html" data-testid="nav-tracker">Status Tracker</a>
+      <a href="fulfilled.html" data-testid="nav-fulfilled">Fulfilled</a>
+      <span class="nav-group-label">Donor &amp; edges</span>
+      <a href="donor-alert.html" data-testid="nav-donor-alert">Donor Alert</a>
+      <a href="edge-no-donor.html" data-testid="nav-edge-no-donor">No Donor Nearby</a>
+      <a href="edge-declined.html" data-testid="nav-edge-declined">Donor Declined</a>
+      <a href="edge-expired.html" data-testid="nav-edge-expired">Request Expired</a>
+    </nav>
+  </details>
+</body>
+</html>

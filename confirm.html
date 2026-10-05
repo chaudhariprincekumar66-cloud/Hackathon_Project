@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirm Donor — Blood Relay</title>
+  <meta name="description" content="Call, message and confirm your matched blood donor, then track the request to fulfillment." />
+  <meta name="theme-color" content="#DC2626" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header shell">
+    <a class="wordmark" href="/" data-testid="wordmark-link" aria-label="Blood Relay home">
+      <span class="drop-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7c3.6 4.6 6.5 8.6 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 11.3 8.4 7.3 12 2.7Z"/></svg>
+      </span>
+      Blood Relay
+    </a>
+    <a class="header-side" href="matching.html" data-testid="back-matching-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg>
+      Donors
+    </a>
+  </header>
+
+  <main class="page-main shell-narrow">
+    <span class="eyebrow eyebrow--muted">Donor contact &amp; confirm</span>
+    <h1 class="h-xl mt-8">Confirm your donor</h1>
+    <p class="sub">Rahul responded 2 minutes ago and is the closest available B- donor.</p>
+
+    <section class="section">
+      <div class="card donor-card" data-testid="confirm-donor-card">
+        <span class="avatar avatar--lg" aria-hidden="true">RP</span>
+        <div class="donor-main">
+          <div class="donor-topline">
+            <h2 class="donor-name">Rahul Patel</h2>
+            <span class="badge badge--group">B-</span>
+          </div>
+          <p class="donor-meta-line">
+            <span class="distance-strong">1.2 km away</span>
+            <span class="sep" aria-hidden="true">·</span>
+            Available now
+          </p>
+          <div class="donor-badges">
+            <span class="badge badge--available">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.6-7 10-4-1.4-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              Verified volunteer
+            </span>
+            <span class="badge badge--notified">Notified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-row-2 mt-16">
+        <a class="btn btn--secondary btn--lg" href="tel:+919876543210" data-testid="call-donor-btn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call
+        </a>
+        <a class="btn btn--secondary btn--lg" href="sms:+919876543210" data-testid="message-donor-btn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Message
+        </a>
+      </div>
+      <p class="text-center small-note mt-8" data-testid="donor-number-note">Rahul's number: +91 98765 43210 — fictional, for prototype only</p>
+    </section>
+
+    <div class="banner banner--reassure" data-testid="confirm-reassurance">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M12 11v5"/></svg>
+      Once confirmed, you can track the request from this screen.
+    </div>
+
+    <section class="section">
+      <a class="btn btn--primary btn--lg btn--block" href="tracker.html" data-testid="confirm-donor-btn">
+        CONFIRM DONOR
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+      </a>
+      <p class="text-center small-note mt-8">Rahul instantly receives the hospital details and your contact number.</p>
+    </section>
+  </main>
+
+  <footer class="page-footer shell">
+    <span>Blood Relay — PixelRush 2026 prototype</span>
+    <span>Fictional donors, numbers and hospitals only</span>
+  </footer>
+
+  <details class="screens-nav">
+    <summary data-testid="screens-nav-toggle" aria-label="Open prototype screen navigator">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      All screens
+    </summary>
+    <nav class="screens-nav-panel" aria-label="Prototype screens">
+      <span class="nav-group-label">Requester flow</span>
+      <a href="/" data-testid="nav-home">Home</a>
+      <a href="request.html" data-testid="nav-request">Emergency Request</a>
+      <a href="matching.html" data-testid="nav-matching">Matching Donors</a>
+      <a href="confirm.html" data-testid="nav-confirm" class="is-here">Donor Confirm <span class="nav-here-dot" aria-hidden="true"></span></a>
+      <a href="tracker.html" data-testid="nav-tracker">Status Tracker</a>
+      <a href="fulfilled.html" data-testid="nav-fulfilled">Fulfilled</a>
+      <span class="nav-group-label">Donor &amp; edges</span>
+      <a href="donor-alert.html" data-testid="nav-donor-alert">Donor Alert</a>
+      <a href="edge-no-donor.html" data-testid="nav-edge-no-donor">No Donor Nearby</a>
+      <a href="edge-declined.html" data-testid="nav-edge-declined">Donor Declined</a>
+      <a href="edge-expired.html" data-testid="nav-edge-expired">Request Expired</a>
+    </nav>
+  </details>
+</body>
+</html>
